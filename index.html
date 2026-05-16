@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Roy — Builder, Researcher, Curious Person</title>
+    <meta name="description" content="The personal story of Soham Roy — a CS student from Jaipur building at the edge of ML, markets, and infrastructure.">
+    <meta name="author" content="Soham Roy">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Nav -->
+<nav>
+    <a href="#hero" class="nav-logo">Soham Roy</a>
+    <div class="nav-links">
+        <a href="#beginning">Origins</a>
+        <a href="#building">Building</a>
+        <a href="#ml">Thinking</a>
+        <a href="#community">Community</a>
+        <a href="#now">Now</a>
+        <a href="#contact">Say Hello</a>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+    <div class="hero-left">
+        <div class="hero-tag">Soham Roy &nbsp;·&nbsp; Jaipur, India &nbsp;·&nbsp; 2026</div>
+        <h1 class="hero-title">
+            I grew up taking things apart<br>
+            to see how they worked.<br>
+            I never quite <em>stopped.</em>
+        </h1>
+        <p class="hero-sub">
+            CS student, builder of ML pipelines and quant systems,
+            co-organizer of one of India's larger student hackathons,
+            and someone who still gets unreasonably excited when
+            a model finally converges.
+        </p>
+        <div class="hero-scroll" aria-hidden="true">
+            <div class="hero-scroll-line"></div>
+            <span class="hero-scroll-text">Scroll</span>
+        </div>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+        <div class="hero-photo-frame">
+            <img class="hero-photo" src="Assets/soham.png" alt="Soham Roy" loading="eager">
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── BEGINNING ── -->
+<section id="beginning">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">01</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Where it started</span>
+        </div>
+
+        <div class="narrative-grid">
+            <h2 class="section-heading reveal">
+                Before the<br>
+                code, there<br>
+                was a broken<br>
+                <em>radio.</em>
+            </h2>
+
+            <div class="narrative-body">
+                <p class="reveal reveal-delay-1">
+                    I was eight when I took apart a radio — not to fix it, but because
+                    I needed to know how sound could live inside wires. I never fixed it.
+                    But I remember staring at the components spread across the floor and
+                    feeling something click into place. Not in the radio. In me.
+                </p>
+                <p class="reveal reveal-delay-2">
+                    I grew up in a household where curiosity was encouraged even when it
+                    was inconvenient. By the time I reached high school, that curiosity had
+                    a direction: I wanted to build things that were useful to real people,
+                    not just impressive in a lab. I became school council member, captained
+                    the interhouse football team — and somewhere in the middle of learning
+                    to lead eleven people on a field, I understood something about systems:
+                    <em>they're only as good as the communication inside them.</em>
+                </p>
+                <p class="reveal reveal-delay-3">
+                    Engineering wasn't a career choice for me. It was the answer to a
+                    question I'd been carrying for years: what's the fastest path from
+                    a problem that matters to a solution that works?
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── BUILDING ── -->
+<section id="building">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">02</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Building real things</span>
+        </div>
+
+        <div class="narrative-grid">
+            <h2 class="section-heading reveal">
+                From<br>
+                curiosity<br>
+                to <em>craft.</em>
+            </h2>
+            <p class="reveal section-intro">
+                There's a gap between knowing how something works and building
+                something that works <em>for someone.</em> Crossing that gap — repeatedly,
+                imperfectly, sometimes publicly — is what the last few years have been about.
+            </p>
+        </div>
+
+        <div class="timeline reveal">
+
+            <div class="tl-card">
+                <span class="tl-tag">IoT · Smart Infrastructure</span>
+                <h3 class="tl-title">Road Condition Monitoring System</h3>
+                <p class="tl-body">
+                    My first project that felt genuinely useful. Sensors on buses,
+                    real-time pothole detection, data pipelines feeding into infrastructure
+                    dashboards. I took it all the way — research paper, grant proposal,
+                    an interview with our Vice Chancellor. The first prototype had a sensor
+                    accuracy issue that took three weeks to debug. I learned more in those
+                    three weeks than in a semester of labs.
+                </p>
+            </div>
+
+            <div class="tl-card">
+                <span class="tl-tag">Drones · Aeromodelling Club</span>
+                <h3 class="tl-title">Building My First Drone from Scratch</h3>
+                <p class="tl-body">
+                    I joined the UEM Aeromodelling Club and attended the UDAAN workshop
+                    by Dronesster. Building a drone from component parts — frame, flight
+                    controller, ESCs, PID tuning — taught me something that software alone
+                    never could: <em>physics doesn't have exceptions.</em> If the math is
+                    wrong, the drone falls. I've thought about that a lot when debugging ML models.
+                </p>
+            </div>
+
+            <div class="tl-card">
+                <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
+                <h3 class="tl-title">Stellar Analytics — NASA Kepler Dataset</h3>
+                <p class="tl-body">
+                    My team Brahmastra entered Stellar Analytics at IIT BHU's Technex
+                    with an ML pipeline for exoplanet transit classification — LightGBM,
+                    voting ensembles, a neural network regressor. We hit ROC-AUC 0.9504
+                    and R² of 0.9635. We won first place. Winning felt less like a destination
+                    and more like a green light — to push it further, toward a paper,
+                    toward diffusion models for signal denoising.
+                </p>
+            </div>
+
+            <div class="tl-card">
+                <span class="tl-tag">Quant Finance · AlgoZen</span>
+                <h3 class="tl-title">Building a Trading System I'd Actually Trust</h3>
+                <p class="tl-body">
+                    AlgoZen wasn't built in a weekend. It went through multiple full
+                    architectural rebuilds — regime detection, walk-forward optimization,
+                    genetic algorithm tuning on NIFTY 500. The targets were specific:
+                    Sharpe above 1.0, CAGR 14–18%, max drawdown under 15%. When it finally
+                    hit Sharpe 1.129, I understood why quantitative people are obsessive.
+                    The discipline the problem demands <em>becomes</em> the discipline you develop.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── ML & THINKING ── -->
+<section id="ml">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">03</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Machine learning & quantitative thinking</span>
+        </div>
+
+        <div class="narrative-grid">
+            <h2 class="section-heading reveal">
+                Patterns<br>
+                in the<br>
+                <em>noise.</em>
+            </h2>
+
+            <div class="narrative-body">
+                <p class="reveal reveal-delay-1">
+                    The transition from building physical systems to thinking about
+                    intelligent ones wasn't a decision — it was gravitational. Climate data,
+                    satellite photometry, financial time series: I kept running into the same
+                    observation. The most important problems in the world are already being
+                    measured. They're just not being understood well enough yet.
+                </p>
+                <p class="reveal reveal-delay-2">
+                    ML gave me a different kind of engineering. Not one where you define
+                    every rule, but one where you define the space for rules to emerge.
+                    There's something almost philosophical about that — and I'm not sure I've
+                    fully separated the philosophy from the practice, or that I want to.
+                </p>
+                <p class="reveal reveal-delay-3">
+                    Quantitative finance drew me in for the same reason. Making better
+                    decisions under uncertainty, with incomplete information, in real time —
+                    that's not just a finance problem. It's the same shape as almost every
+                    hard problem I find interesting. Right now I'm exploring diffusion models
+                    for exoplanet signal denoising, which is a very specific sentence that
+                    would have meant nothing to me two years ago and now feels like the
+                    most natural next step in the world.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── PULL QUOTE ── -->
+<section class="pull-quote-section">
+    <blockquote class="pull-quote reveal">
+        I don't think I fell in love with technology.<br>
+        I think I fell in love with the feeling of making<br>
+        something <em>useful</em> exist where nothing existed before —<br>
+        and the discipline it takes to get there honestly.
+    </blockquote>
+</section>
+
+<!-- ── COMMUNITY ── -->
+<section id="community">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">04</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Community & leadership</span>
+        </div>
+
+        <div class="narrative-grid">
+            <h2 class="section-heading reveal">
+                The best<br>
+                things I've<br>
+                built were<br>
+                <em>with people.</em>
+            </h2>
+
+            <div class="narrative-body">
+                <p class="reveal reveal-delay-1">
+                    I captained a football team before I ever led a technical project.
+                    That experience gave me something no CS curriculum covers:
+                    <em>people don't follow plans, they follow conviction.</em> On the field
+                    I learned to read a group's energy, to know when to push and when to
+                    step back, to understand that leadership isn't about being the most
+                    talented person in the room.
+                </p>
+                <p class="reveal reveal-delay-2">
+                    Co-organizing ACEHack 5.0 — 10,000+ registrations — was a different
+                    kind of test. The logistics were hard. But what I remember most are
+                    the moments: someone's code finally working at 3 AM, strangers becoming
+                    collaborators in a corridor, a first-time participant realizing they
+                    could actually compete. I did it partly because I remembered what it
+                    felt like to be the underdog in a room full of people more experienced
+                    than me — and how much it mattered that the room existed at all.
+                </p>
+                <p class="reveal reveal-delay-3">
+                    Volunteering at the International Conference on Advances in English
+                    Language Studies grounded me in a different way. It reminded me that
+                    the most interesting conversations happen at the edges of disciplines —
+                    and that the people doing the most thoughtful work are rarely the loudest
+                    ones in the room.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── NOW ── -->
+<section id="now">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">05</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Right now</span>
+        </div>
+
+        <div class="narrative-grid narrative-grid-spaced">
+            <h2 class="section-heading reveal">
+                What I'm<br>
+                thinking<br>
+                about <em>today.</em>
+            </h2>
+            <p class="reveal section-intro">
+                The things keeping me up at night, the questions I'm chasing,
+                and what the next chapter looks like from the inside.
+            </p>
+        </div>
+
+        <div class="now-grid reveal">
+            <div class="now-item">
+                <span class="now-label">Research</span>
+                <p class="now-text">Extending Stellar Analytics into a proper paper — <strong>diffusion models for exoplanet transit signal denoising</strong> on the NASA Kepler dataset. Targeting NeurIPS ML4PS and the Astronomical Journal. The science is hard and I'm very much figuring it out as I go.</p>
+            </div>
+            <div class="now-item">
+                <span class="now-label">Looking for</span>
+                <p class="now-text">Research internships in <strong>ML/AI and systems</strong> — the kind where I can contribute to something that gets published or deployed, not just explored. Also keeping an eye on IIT research programs like SURGE.</p>
+            </div>
+            <div class="now-item">
+                <span class="now-label">Project</span>
+                <p class="now-text"><strong>ShadowMap</strong> — a university grant-funded geospatial ML model for urban heat island prediction across Delhi. Running with a small team, proper PI supervision, actual real-world data. It's the project that taught me what it means to be accountable to a research timeline.</p>
+            </div>
+            <div class="now-item">
+                <span class="now-label">Reading</span>
+                <p class="now-text">Urban systems design, ancient Indian mythology and its structural logic, and anything about <strong>decision-making under uncertainty</strong>. I'm convinced the best engineers are also storytellers — still working on becoming both.</p>
+            </div>
+            <div class="now-item">
+                <span class="now-label">Sitting with</span>
+                <p class="now-text">The question of what kind of builder I want to become. The technical parts are getting clearer. The human parts — what to build, for whom, at what cost — take longer to figure out. I think that's probably correct.</p>
+            </div>
+        </div>
+
+        <div class="pills reveal pills-offset">
+            <span class="pill hi">ML systems that generalize</span>
+            <span class="pill hi">Quantitative reasoning</span>
+            <span class="pill hi">Exoplanet astrophysics</span>
+            <span class="pill hi">Urban heat & climate data</span>
+            <span class="pill">Decision-making under uncertainty</span>
+            <span class="pill">What makes research publishable</span>
+            <span class="pill">How markets encode information</span>
+            <span class="pill">Hindu mythology & symbolism</span>
+            <span class="pill">Organizing well</span>
+            <span class="pill">Drones & embedded systems</span>
+            <span class="pill">Building in public</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="contact-heading reveal">
+            Let's<br>
+            <em>talk.</em>
+        </h2>
+        <p class="contact-body reveal">
+            If something here resonated — a shared interest, a research overlap,
+            an opportunity, or just a conversation you think I'd find interesting —
+            I'd genuinely love to hear from you.
+        </p>
+        <div class="contact-links reveal">
+            <a href="mailto:sohamroy20sr@gmail.com" class="contact-link">
+                <span>sohamroy20sr@gmail.com</span>
+                <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">
+                <span>GitHub</span>
+                <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link">
+                <span>LinkedIn</span>
+                <span class="contact-link-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <span>Soham Roy · 2026</span>
+    <span>Built with thought.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
