@@ -72,7 +72,22 @@ nav.scrolled {
     transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--ink); }
-
+.nav-links a.active {
+    color: var(--ink);
+}
+.nav-links a.active::after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    background: var(--accent);
+    margin-top: 3px;
+    border-radius: 2px;
+    animation: underlineIn 0.3s ease forwards;
+}
+@keyframes underlineIn {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
 /* ══════════════════════════════
    HERO  — the key section
 ══════════════════════════════ */
@@ -303,6 +318,14 @@ section { padding: var(--gap) clamp(24px, 6vw, 80px); }
 }
 .tl-card {
     padding-left: 40px; margin-bottom: 56px; position: relative;
+}
+.tl-card {
+    transition: transform 0.25s ease;
+}
+.tl-card:hover {
+    transform: translateX(6px);
+    border-left: 2px solid var(--accent);
+    padding-left: 38px;
 }
 .tl-card::before {
     content: ''; position: absolute;

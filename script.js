@@ -69,3 +69,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) lenis.scrollTo(target, { offset: -80, duration: 1.4 });
     });
 });
+/* ── Active nav on scroll ── */
+const navSections = document.querySelectorAll('section[id]');
+const navAnchors  = document.querySelectorAll('.nav-links a');
+
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navAnchors.forEach(a => a.classList.remove('active'));
+            const match = document.querySelector(
+                `.nav-links a[href="#${entry.target.id}"]`
+            );
+            if (match) match.classList.add('active');
+        }
+    });
+}, {
+    rootMargin: '-40% 0px -55% 0px',  /* triggers when section is ~middle of viewport */
+    threshold: 0
+});
+
+navSections.forEach(s => navObserver.observe(s));
