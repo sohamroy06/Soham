@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soham Roy — Builder, Researcher, Curious Person</title>
     <meta name="description" content="The personal story of Soham Roy — a CS student from Jaipur building at the edge of ML, markets, and infrastructure.">
     <meta name="author" content="Soham Roy">
     <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://sohamroy.netlify.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Soham Roy — Builder, Researcher, Curious Person">
+    <meta property="og:description" content="The personal story of Soham Roy — a CS student from Jaipur building at the edge of ML, markets, and infrastructure.">
+    <meta property="og:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://sohamroy.netlify.app/">
+    <meta property="og:site_name" content="Soham Roy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Soham Roy — Builder, Researcher, Curious Person">
+    <meta name="twitter:description" content="The personal story of Soham Roy — a CS student from Jaipur building at the edge of ML, markets, and infrastructure.">
+    <meta name="twitter:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon-16.png">
+    <link rel="apple-touch-icon" href="Assets/apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Soham Roy",
+        "url": "https://sohamroy.netlify.app/",
+        "image": "https://sohamroy.netlify.app/Assets/og-image.jpg",
+        "jobTitle": "CS Student & Full-Stack / ML Developer",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Engineering & Management, Jaipur"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jaipur",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://github.com/sohamroy06",
+            "https://www.linkedin.com/in/soham-roy-8a664a320/"
+        ]
+    }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 </head>
 <body>
 
+<a href="#hero" class="skip-link">Skip to content</a>
 <div class="noise" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -40,10 +91,10 @@
 <section class="hero" id="hero">
     <div class="hero-left">
         <div class="hero-tag">Soham Roy &nbsp;·&nbsp; Jaipur, India &nbsp;·&nbsp; 2026</div>
-        <h1 class="hero-title">
-            I grew up taking things apart<br>
-            to see how they worked.<br>
-            I never quite <em>stopped.</em>
+        <h1 class="hero-title" id="hero-title">
+            <span class="line-mask"><span class="line">I grew up taking things apart</span></span>
+            <span class="line-mask"><span class="line">to see how they worked.</span></span>
+            <span class="line-mask"><span class="line">I never quite <em>stopped.</em></span></span>
         </h1>
         <p class="hero-sub">
             CS student at UEM Jaipur. I build ML pipelines, IoT systems, and quantitative trading strategies. Currently seeking research internships in ML/AI — open to IIT SURGE, industry labs, and remote positions.
@@ -55,7 +106,10 @@
     </div>
     <div class="hero-right" aria-hidden="true">
         <div class="hero-photo-frame">
-            <img class="hero-photo" src="Assets/soham.png" alt="Soham Roy" loading="eager">
+            <picture>
+                <source srcset="Assets/soham.webp" type="image/webp">
+                <img class="hero-photo" src="Assets/soham.jpg" alt="Soham Roy" loading="eager" fetchpriority="high" width="1600" height="2088">
+            </picture>
         </div>
     </div>
 </section>
@@ -67,15 +121,15 @@
     <div class="container">
         <div class="cred-grid reveal">
             <div class="cred-item">
-                <div class="cred-stat">0.9504</div>
+                <div class="cred-stat" data-count="0.9504" data-decimals="4">0.9504</div>
                 <div class="cred-label">ROC-AUC on NASA Kepler Dataset</div>
             </div>
             <div class="cred-item">
-                <div class="cred-stat">1.129</div>
+                <div class="cred-stat" data-count="1.129" data-decimals="3">1.129</div>
                 <div class="cred-label">Sharpe Ratio on NIFTY 500</div>
             </div>
             <div class="cred-item">
-                <div class="cred-stat">10,000+</div>
+                <div class="cred-stat" data-count="10000" data-suffix="+" data-format="comma">10,000+</div>
                 <div class="cred-label">Hackathon Registrations</div>
             </div>
             <div class="cred-item">
@@ -83,7 +137,7 @@
                 <div class="cred-label">IIT BHU Technex</div>
             </div>
             <div class="cred-item">
-                <div class="cred-stat">2</div>
+                <div class="cred-stat" data-count="2">2</div>
                 <div class="cred-label">International Conference Sites Built</div>
             </div>
         </div>
@@ -145,7 +199,7 @@
             </p>
         </div>
 
-        <div class="timeline reveal">
+        <div class="timeline">
 
             <div class="tl-card">
                 <span class="tl-tag">IoT · Smart Infrastructure</span>
@@ -188,6 +242,12 @@
             <div class="tl-card">
                 <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
                 <h3 class="tl-title">Stellar Analytics — NASA Kepler Dataset</h3>
+                <a class="tl-thumb" href="https://planetsearch.netlify.app/" target="_blank" rel="noopener">
+                    <picture>
+                        <source srcset="Assets/projects/stellar-analytics.webp" type="image/webp">
+                        <img src="Assets/projects/stellar-analytics.jpg" alt="Stellar Analytics exoplanet verification interface" loading="lazy" width="900" height="562">
+                    </picture>
+                </a>
                 <p class="tl-body">
                     My team Brahmastra entered Stellar Analytics at IIT BHU's Technex with an
                     ML pipeline for exoplanet transit classification — LightGBM, voting
@@ -214,6 +274,12 @@
             <div class="tl-card">
                 <span class="tl-tag">Geospatial AI · ShadowMap</span>
                 <h3 class="tl-title">Predicting Urban Heat Before It Happens</h3>
+                    <a class="tl-thumb" href="https://urban-heat-island-prediction.netlify.app/" target="_blank" rel="noopener">
+                        <picture>
+                            <source srcset="Assets/projects/shadowmap.webp" type="image/webp">
+                            <img src="Assets/projects/shadowmap.jpg" alt="ShadowMap urban heat island simulator interface" loading="lazy" width="900" height="562">
+                        </picture>
+                    </a>
                     <p class="tl-body">
                         ShadowMap began as an attempt to understand why some parts of a city feel
                         physically harsher than others. I built a geospatial ML pipeline using
@@ -229,6 +295,12 @@
             <div class="tl-card">
                 <span class="tl-tag">Web · Conference Site</span>
                 <h3 class="tl-title">ICNIC 2026</h3>
+                <a class="tl-thumb" href="https://iconic.uem.edu.in/" target="_blank" rel="noopener">
+                    <picture>
+                        <source srcset="Assets/projects/iconic.webp" type="image/webp">
+                        <img src="Assets/projects/iconic.jpg" alt="ICNIC 2026 conference website homepage" loading="lazy" width="900" height="562">
+                    </picture>
+                </a>
                 <p class="tl-body">
                     Designed and built the official website for the International Conference on
                     NextGen Intelligent Computing — a flagship academic event by UEM Jaipur's
@@ -242,6 +314,12 @@
             <div class="tl-card">
                 <span class="tl-tag">Web · Conference Site</span>
                 <h3 class="tl-title">ICCASA 2026</h3>
+                <a class="tl-thumb" href="https://iccasa2026.uem.edu.in/" target="_blank" rel="noopener">
+                    <picture>
+                        <source srcset="Assets/projects/iccasa.webp" type="image/webp">
+                        <img src="Assets/projects/iccasa.jpg" alt="ICCASA 2026 conference website homepage" loading="lazy" width="900" height="562">
+                    </picture>
+                </a>
                 <p class="tl-body">
                     Built the site for the 4th International Conference on Computational Applied
                     Sciences and their Applications — hybrid mode, September 2026, targeting
@@ -497,6 +575,31 @@
         <p class="contact-body reveal">
             If you're working on something in ML, systems, or quant — and you think I could contribute — let's talk.
         </p>
+
+        <form class="contact-form reveal" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hp-field"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-field">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" required autocomplete="email">
+                </div>
+            </div>
+            <div class="form-field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="cta-button contact-submit">Send Message</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+        </form>
     </div>
 </section>
 
@@ -504,25 +607,25 @@
     <div class="footer-content">
         <span class="footer-text">Soham Roy · 2026</span>
         <div class="footer-links">
-            <a href="mailto:sohamroy20sr@gmail.com" class="footer-link" title="Email">
-                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <a href="mailto:sohamroy20sr@gmail.com" class="footer-link" title="Email" aria-label="Email Soham Roy">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/soham-roy-8a664a320/" target="_blank" rel="noopener" class="footer-link" title="LinkedIn">
-                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://www.linkedin.com/in/soham-roy-8a664a320/" target="_blank" rel="noopener" class="footer-link" title="LinkedIn" aria-label="Soham Roy on LinkedIn">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
             </a>
-            <a href="https://github.com/sohamroy06" target="_blank" rel="noopener" class="footer-link" title="GitHub">
-                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <a href="https://github.com/sohamroy06" target="_blank" rel="noopener" class="footer-link" title="GitHub" aria-label="Soham Roy on GitHub">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
         </div>
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

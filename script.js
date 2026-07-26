@@ -44,6 +44,72 @@ if (heroPhoto) {
     });
 }
 
+/* ── Hero title line reveal ── */
+gsap.to('#hero-title .line', {
+    y: '0%',
+    opacity: 1,
+    duration: 1.1,
+    ease: 'power4.out',
+    stagger: 0.12,
+    delay: 0.5,
+});
+
+/* ── Credibility stat count-up ── */
+document.querySelectorAll('.cred-stat[data-count]').forEach((el) => {
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const useComma = el.dataset.format === 'comma';
+    const counter = { val: 0 };
+
+    ScrollTrigger.create({
+        trigger: el,
+        start: 'top 88%',
+        once: true,
+        onEnter: () => {
+            gsap.to(counter, {
+                val: target,
+                duration: 1.6,
+                ease: 'power2.out',
+                onUpdate: () => {
+                    let display = decimals > 0 ? counter.val.toFixed(decimals) : Math.round(counter.val).toString();
+                    if (useComma) display = Number(display).toLocaleString('en-US');
+                    el.textContent = display + suffix;
+                },
+            });
+        },
+    });
+});
+
+/* ── Staggered timeline card reveal ── */
+gsap.set('.tl-card', { opacity: 0, y: 36 });
+ScrollTrigger.batch('.tl-card', {
+    start: 'top 85%',
+    once: true,
+    onEnter: (batch) => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.12,
+    }),
+});
+
+/* ── Magnetic buttons ── */
+document.querySelectorAll('.cta-button').forEach((btn) => {
+    const moveX = gsap.quickTo(btn, 'x', { duration: 0.4, ease: 'power3.out' });
+    const moveY = gsap.quickTo(btn, 'y', { duration: 0.4, ease: 'power3.out' });
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        moveX((e.clientX - rect.left - rect.width / 2) * 0.25);
+        moveY((e.clientY - rect.top - rect.height / 2) * 0.35);
+    });
+    btn.addEventListener('mouseleave', () => {
+        moveX(0);
+        moveY(0);
+    });
+});
+
 /* ── Scroll reveal ── */
 const revealEls = document.querySelectorAll('.reveal');
 
@@ -89,3 +155,39 @@ const navObserver = new IntersectionObserver((entries) => {
 });
 
 navSections.forEach(s => navObserver.observe(s));
+
+/* ── Contact form (Netlify Forms via fetch, stays on-page) ── */
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const status = document.getElementById('form-status');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const formData = new FormData(contactForm);
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.textContent = '';
+        status.classList.remove('success', 'error');
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then((res) => {
+                if (!res.ok) throw new Error('Network response was not ok');
+                status.textContent = "Thanks — I'll get back to you soon.";
+                status.classList.add('success');
+                contactForm.reset();
+            })
+            .catch(() => {
+                status.textContent = 'Something went wrong — try emailing me directly instead.';
+                status.classList.add('error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            });
+    });
+}

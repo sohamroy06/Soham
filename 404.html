@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Soham Roy</title>
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --ink: #0d0d0d;
+            --paper: #f5f3ee;
+            --ink-muted: #6b6b6b;
+            --accent: #c17b3f;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', system-ui, sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+        html, body {
+            height: 100%;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-weight: 300;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+        }
+        .code {
+            font-family: var(--mono);
+            font-size: 13px;
+            letter-spacing: 0.14em;
+            color: var(--ink-muted);
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(40px, 8vw, 88px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+        h1 em { font-style: italic; color: var(--accent); }
+        p {
+            color: var(--ink-muted);
+            font-size: 15px;
+            max-width: 420px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        a.home {
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            border: 1.5px solid var(--accent);
+            padding: 14px 28px;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        a.home:hover {
+            background: var(--accent);
+            color: var(--paper);
+        }
+        a.home:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="code">ERROR 404</div>
+    <h1>This page took a<br>wrong <em>turn.</em></h1>
+    <p>Whatever you were looking for isn't here — maybe it moved, maybe it never existed. Let's get you back.</p>
+    <a class="home" href="/">← Back to the story</a>
+</body>
+</html>
