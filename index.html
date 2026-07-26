@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -72,6 +72,7 @@
 <a href="#hero" class="skip-link">Skip to content</a>
 <div class="noise" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
+<div class="edge-mark" aria-hidden="true"><span>Soham Roy — Portfolio — Jaipur, India — 2026 — Soham Roy — Portfolio</span></div>
 
 <!-- Nav -->
 <nav>
@@ -116,41 +117,43 @@
 
 <div class="divider"></div>
 
-<!-- ── CREDIBILITY BAR ── -->
-<section class="credibility-bar">
+<!-- ── STAT STRIP ── -->
+<section class="stat-strip">
     <div class="container">
-        <div class="cred-grid reveal">
-            <div class="cred-item">
-                <div class="cred-stat" data-count="0.9504" data-decimals="4">0.9504</div>
-                <div class="cred-label">ROC-AUC on NASA Kepler Dataset</div>
+        <div class="stat-grid reveal">
+            <div class="stat-item">
+                <div class="stat-num" data-count="0.9504" data-decimals="4">0.9504</div>
+                <div class="stat-label">ROC-AUC on NASA Kepler Dataset</div>
             </div>
-            <div class="cred-item">
-                <div class="cred-stat" data-count="1.129" data-decimals="3">1.129</div>
-                <div class="cred-label">Sharpe Ratio on NIFTY 500</div>
+            <div class="stat-item">
+                <div class="stat-num" data-count="1.129" data-decimals="3">1.129</div>
+                <div class="stat-label">Sharpe Ratio on NIFTY 500</div>
             </div>
-            <div class="cred-item">
-                <div class="cred-stat" data-count="10000" data-suffix="+" data-format="comma">10,000+</div>
-                <div class="cred-label">Hackathon Registrations</div>
+            <div class="stat-item">
+                <div class="stat-num" data-count="10000" data-suffix="+" data-format="comma">10,000+</div>
+                <div class="stat-label">Hackathon Registrations</div>
             </div>
-            <div class="cred-item">
-                <div class="cred-stat">Top 3</div>
-                <div class="cred-label">IIT BHU Technex</div>
+            <div class="stat-item">
+                <div class="stat-num">Top 3</div>
+                <div class="stat-label">IIT BHU Technex</div>
             </div>
-            <div class="cred-item">
-                <div class="cred-stat" data-count="2">2</div>
-                <div class="cred-label">International Conference Sites Built</div>
+            <div class="stat-item">
+                <div class="stat-num" data-count="2">2</div>
+                <div class="stat-label">International Conference Sites Built</div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="divider"></div>
 <section id="beginning">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">01</span>
-            <div class="section-rule"></div>
-            <span class="section-name">Where it started</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">01</span>
+            <div class="section-label reveal">
+                <span class="section-num">01</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Where it started</span>
+            </div>
         </div>
 
         <div class="narrative-grid">
@@ -182,10 +185,13 @@
 <!-- ── BUILDING ── -->
 <section id="building">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">02</span>
-            <div class="section-rule"></div>
-            <span class="section-name">Building real things</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">02</span>
+            <div class="section-label reveal">
+                <span class="section-num">02</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Building real things</span>
+            </div>
         </div>
 
         <div class="narrative-grid">
@@ -202,6 +208,7 @@
         <div class="timeline">
 
             <div class="tl-card">
+                <span class="tl-index">01</span>
                 <span class="tl-tag">IoT · Smart Infrastructure</span>
                 <h3 class="tl-title">Road Condition Monitoring System</h3>
                 <p class="tl-body">
@@ -215,6 +222,7 @@
             </div>
 
             <div class="tl-card">
+                <span class="tl-index">02</span>
                 <span class="tl-tag">Drones · Aeromodelling Club</span>
                 <h3 class="tl-title">Building My First Drone from Scratch</h3>
                 <p class="tl-body">
@@ -227,7 +235,9 @@
                 <p class="tl-link-group"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7265371529654243328/" target="_blank" rel="noopener" class="tl-link">→ LinkedIn</a></p>
                 <p class="tl-tech">Arduino · PID Tuning · Flight Controller · ESCs</p>
             </div>
+
             <div class="tl-card">
+                <span class="tl-index">03</span>
                 <span class="tl-tag">Competition · Technex IIT BHU 2025</span>
                 <h3 class="tl-title">Case Study Challenge — Top 3</h3>
                 <p class="tl-body">
@@ -239,26 +249,27 @@
                 <p class="tl-tech">Case Study · Structured Problem Solving · Presentation</p>
             </div>
 
-            <div class="tl-card">
-                <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
-                <h3 class="tl-title">Stellar Analytics — NASA Kepler Dataset</h3>
-                <a class="tl-thumb" href="https://planetsearch.netlify.app/" target="_blank" rel="noopener">
-                    <picture>
-                        <source srcset="Assets/projects/stellar-analytics.webp" type="image/webp">
-                        <img src="Assets/projects/stellar-analytics.jpg" alt="Stellar Analytics exoplanet verification interface" loading="lazy" width="900" height="562">
-                    </picture>
-                </a>
-                <p class="tl-body">
-                    My team Brahmastra entered Stellar Analytics at IIT BHU's Technex with an
-                    ML pipeline for exoplanet transit classification — LightGBM, voting
-                    ensembles, and a neural network regressor. We hit ROC-AUC 0.9504 and
-                    R² of 0.9635, then took first place.
-                </p>
-                <p class="tl-link-group"><a href="https://planetsearch.netlify.app/" target="_blank" rel="noopener" class="tl-link">→ Live</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/Planet-Search-Algorithm" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
-                <p class="tl-tech">Python · LightGBM · Neural Networks · NASA Kepler Dataset</p>
+            <div class="tl-card tl-card--art tl-art-left">
+                <div class="tl-art">
+                    <img src="Assets/art/stellar-analytics.svg" alt="" loading="lazy" width="900" height="562">
+                </div>
+                <div class="tl-content">
+                    <span class="tl-index">04</span>
+                    <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
+                    <h3 class="tl-title">Stellar Analytics — NASA Kepler Dataset</h3>
+                    <p class="tl-body">
+                        My team Brahmastra entered Stellar Analytics at IIT BHU's Technex with an
+                        ML pipeline for exoplanet transit classification — LightGBM, voting
+                        ensembles, and a neural network regressor. We hit ROC-AUC 0.9504 and
+                        R² of 0.9635, then took first place.
+                    </p>
+                    <p class="tl-link-group"><a href="https://planetsearch.netlify.app/" target="_blank" rel="noopener" class="tl-link">→ Live</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/Planet-Search-Algorithm" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
+                    <p class="tl-tech">Python · LightGBM · Neural Networks · NASA Kepler Dataset</p>
+                </div>
             </div>
 
             <div class="tl-card">
+                <span class="tl-index">05</span>
                 <span class="tl-tag">Quant Finance · AlgoZen</span>
                 <h3 class="tl-title">Building a Trading System I'd Actually Trust</h3>
                 <p class="tl-body">
@@ -271,15 +282,15 @@
                 <p class="tl-link-group"><a href="https://github.com/sohamroy06/ALGOZEN_NEW" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
                 <p class="tl-tech">Python · Regime Detection · Walk-forward Optimization · GA Tuning · NIFTY 500</p>
             </div>
-            <div class="tl-card">
-                <span class="tl-tag">Geospatial AI · ShadowMap</span>
-                <h3 class="tl-title">Predicting Urban Heat Before It Happens</h3>
-                    <a class="tl-thumb" href="https://urban-heat-island-prediction.netlify.app/" target="_blank" rel="noopener">
-                        <picture>
-                            <source srcset="Assets/projects/shadowmap.webp" type="image/webp">
-                            <img src="Assets/projects/shadowmap.jpg" alt="ShadowMap urban heat island simulator interface" loading="lazy" width="900" height="562">
-                        </picture>
-                    </a>
+
+            <div class="tl-card tl-card--art tl-art-right">
+                <div class="tl-art">
+                    <img src="Assets/art/shadowmap.svg" alt="" loading="lazy" width="900" height="562">
+                </div>
+                <div class="tl-content">
+                    <span class="tl-index">06</span>
+                    <span class="tl-tag">Geospatial AI · ShadowMap</span>
+                    <h3 class="tl-title">Predicting Urban Heat Before It Happens</h3>
                     <p class="tl-body">
                         ShadowMap began as an attempt to understand why some parts of a city feel
                         physically harsher than others. I built a geospatial ML pipeline using
@@ -288,46 +299,46 @@
                         was making climate data interactive, interpretable, and useful.
                     </p>
                     <p class="tl-link-group"><a href="https://urban-heat-island-prediction.netlify.app/" target="_blank" rel="noopener" class="tl-link">→ Live</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/Urban-Heat-Island-Prediction" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
-                    <p class="tl-tech">
-                        XGBoost · FastAPI · React · Leaflet.js · Geospatial ML · Quantile Regression
-                    </p>
-           </div>
-            <div class="tl-card">
-                <span class="tl-tag">Web · Conference Site</span>
-                <h3 class="tl-title">ICNIC 2026</h3>
-                <a class="tl-thumb" href="https://iconic.uem.edu.in/" target="_blank" rel="noopener">
-                    <picture>
-                        <source srcset="Assets/projects/iconic.webp" type="image/webp">
-                        <img src="Assets/projects/iconic.jpg" alt="ICNIC 2026 conference website homepage" loading="lazy" width="900" height="562">
-                    </picture>
-                </a>
-                <p class="tl-body">
-                    Designed and built the official website for the International Conference on
-                    NextGen Intelligent Computing — a flagship academic event by UEM Jaipur's
-                    CSE department. The site handles keynote speakers, paper tracks, schedules,
-                    registration, and venue for an international academic audience.
-                </p>
-                <p class="tl-link-group"><a href="https://iconic.uem.edu.in/" target="_blank" rel="noopener" class="tl-link">→ Live</a></p>
-                <p class="tl-tech">React · HTML/CSS · Conference Management</p>
+                    <p class="tl-tech">XGBoost · FastAPI · React · Leaflet.js · Geospatial ML · Quantile Regression</p>
+                </div>
             </div>
 
-            <div class="tl-card">
-                <span class="tl-tag">Web · Conference Site</span>
-                <h3 class="tl-title">ICCASA 2026</h3>
-                <a class="tl-thumb" href="https://iccasa2026.uem.edu.in/" target="_blank" rel="noopener">
-                    <picture>
-                        <source srcset="Assets/projects/iccasa.webp" type="image/webp">
-                        <img src="Assets/projects/iccasa.jpg" alt="ICCASA 2026 conference website homepage" loading="lazy" width="900" height="562">
-                    </picture>
-                </a>
-                <p class="tl-body">
-                    Built the site for the 4th International Conference on Computational Applied
-                    Sciences and their Applications — hybrid mode, September 2026, targeting
-                    Scopus indexing. From call-for-papers to registration flow, it had to work
-                    for in-person and virtual attendees alike.
-                </p>
-                <p class="tl-link-group"><a href="https://iccasa2026.uem.edu.in/" target="_blank" rel="noopener" class="tl-link">→ Live</a></p>
-                <p class="tl-tech">React · HTML/CSS · Hybrid Event · Scopus</p>
+            <div class="tl-card tl-card--art tl-art-left">
+                <div class="tl-art">
+                    <img src="Assets/art/iconic.svg" alt="" loading="lazy" width="900" height="562">
+                </div>
+                <div class="tl-content">
+                    <span class="tl-index">07</span>
+                    <span class="tl-tag">Web · Conference Site</span>
+                    <h3 class="tl-title">ICNIC 2026</h3>
+                    <p class="tl-body">
+                        Designed and built the official website for the International Conference on
+                        NextGen Intelligent Computing — a flagship academic event by UEM Jaipur's
+                        CSE department. The site handles keynote speakers, paper tracks, schedules,
+                        registration, and venue for an international academic audience.
+                    </p>
+                    <p class="tl-link-group"><a href="https://iconic.uem.edu.in/" target="_blank" rel="noopener" class="tl-link">→ Live</a></p>
+                    <p class="tl-tech">React · HTML/CSS · Conference Management</p>
+                </div>
+            </div>
+
+            <div class="tl-card tl-card--art tl-art-right">
+                <div class="tl-art">
+                    <img src="Assets/art/iccasa.svg" alt="" loading="lazy" width="900" height="562">
+                </div>
+                <div class="tl-content">
+                    <span class="tl-index">08</span>
+                    <span class="tl-tag">Web · Conference Site</span>
+                    <h3 class="tl-title">ICCASA 2026</h3>
+                    <p class="tl-body">
+                        Built the site for the 4th International Conference on Computational Applied
+                        Sciences and their Applications — hybrid mode, September 2026, targeting
+                        Scopus indexing. From call-for-papers to registration flow, it had to work
+                        for in-person and virtual attendees alike.
+                    </p>
+                    <p class="tl-link-group"><a href="https://iccasa2026.uem.edu.in/" target="_blank" rel="noopener" class="tl-link">→ Live</a></p>
+                    <p class="tl-tech">React · HTML/CSS · Hybrid Event · Scopus</p>
+                </div>
             </div>
 
         </div>
@@ -339,10 +350,13 @@
 <!-- ── ML & THINKING ── -->
 <section id="ml">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">03</span>
-            <div class="section-rule"></div>
-            <span class="section-name">Machine learning & quantitative thinking</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">03</span>
+            <div class="section-label reveal">
+                <span class="section-num">03</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Machine learning & quantitative thinking</span>
+            </div>
         </div>
 
         <div class="narrative-grid">
@@ -371,10 +385,13 @@
 <!-- ── SKILLS ── -->
 <section id="skills">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">03.5</span>
-            <div class="section-rule"></div>
-            <span class="section-name">What I work with</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">04</span>
+            <div class="section-label reveal">
+                <span class="section-num">04</span>
+                <div class="section-rule"></div>
+                <span class="section-name">What I work with</span>
+            </div>
         </div>
 
         <div class="skills-grid reveal">
@@ -451,6 +468,7 @@
 
 <!-- ── PULL QUOTE ── -->
 <section class="pull-quote-section">
+    <span class="quote-mark" aria-hidden="true">&#8220;</span>
     <blockquote class="pull-quote reveal">
         I don't think I fell in love with technology.<br>
         I think I fell in love with the feeling of making<br>
@@ -462,10 +480,13 @@
 <!-- ── COMMUNITY ── -->
 <section id="community">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">04</span>
-            <div class="section-rule"></div>
-            <span class="section-name">Community & leadership</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">05</span>
+            <div class="section-label reveal">
+                <span class="section-num">05</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Community & leadership</span>
+            </div>
         </div>
 
         <div class="narrative-grid">
@@ -496,10 +517,13 @@
 <!-- ── NOW ── -->
 <section id="now">
     <div class="container">
-        <div class="section-label reveal">
-            <span class="section-num">05</span>
-            <div class="section-rule"></div>
-            <span class="section-name">Right now</span>
+        <div class="section-head">
+            <span class="section-watermark" aria-hidden="true">06</span>
+            <div class="section-label reveal">
+                <span class="section-num">06</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Right now</span>
+            </div>
         </div>
 
         <div class="narrative-grid narrative-grid-spaced">

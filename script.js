@@ -54,8 +54,22 @@ gsap.to('#hero-title .line', {
     delay: 0.5,
 });
 
-/* ── Credibility stat count-up ── */
-document.querySelectorAll('.cred-stat[data-count]').forEach((el) => {
+/* ── Section watermark parallax — big numerals drift slower than scroll ── */
+document.querySelectorAll('.section-watermark').forEach((el) => {
+    gsap.to(el, {
+        y: 60,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: el.closest('section'),
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+        },
+    });
+});
+
+/* ── Stat count-up ── */
+document.querySelectorAll('.stat-num[data-count]').forEach((el) => {
     const target = parseFloat(el.dataset.count);
     const decimals = parseInt(el.dataset.decimals || '0', 10);
     const suffix = el.dataset.suffix || '';
@@ -82,8 +96,8 @@ document.querySelectorAll('.cred-stat[data-count]').forEach((el) => {
 });
 
 /* ── Staggered timeline card reveal ── */
-gsap.set('.tl-card', { opacity: 0, y: 36 });
-ScrollTrigger.batch('.tl-card', {
+gsap.set('.tl-card:not(.tl-card--art)', { opacity: 0, y: 36 });
+ScrollTrigger.batch('.tl-card:not(.tl-card--art)', {
     start: 'top 85%',
     once: true,
     onEnter: (batch) => gsap.to(batch, {
@@ -93,6 +107,20 @@ ScrollTrigger.batch('.tl-card', {
         ease: 'power3.out',
         stagger: 0.12,
     }),
+});
+
+/* ── Art cards slide in from the side their art panel sits on ── */
+gsap.set('.tl-art-left', { opacity: 0, x: -48 });
+gsap.set('.tl-art-right', { opacity: 0, x: 48 });
+ScrollTrigger.batch('.tl-art-left', {
+    start: 'top 85%',
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12 }),
+});
+ScrollTrigger.batch('.tl-art-right', {
+    start: 'top 85%',
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12 }),
 });
 
 /* ── Magnetic buttons ── */
