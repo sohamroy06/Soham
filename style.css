@@ -1043,3 +1043,46 @@ footer {
     .cs-nav-footer { flex-direction: column; align-items: stretch; }
     .cs-nav-footer .cta-button { width: 100%; }
 }
+
+/* ══════════════════════════════
+   REDUCED MOTION
+   Neutralizes CSS-driven entrance
+   animations and hover motion.
+   (Scroll-linked / JS-driven motion
+   is skipped directly in script.js)
+══════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .hero-tag, .hero-sub, .hero-scroll {
+        animation: none;
+        opacity: 1;
+    }
+    .js .hero-title .line {
+        transform: none;
+        opacity: 1;
+    }
+    .hero-photo {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .reveal {
+        transform: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links a.active::after { animation: none; }
+
+    .tl-card:hover {
+        transform: none;
+        border-left: none;
+        padding-left: 44px;
+    }
+    .tl-art img,
+    .tl-card--art:hover .tl-art img {
+        transition: none;
+        transform: none;
+    }
+}
