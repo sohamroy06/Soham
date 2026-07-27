@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowMap — Case Study | Soham Roy</title>
+    <meta name="description" content="A geospatial ML pipeline predicting block-level urban heat across Delhi — fusing Sentinel-3 LST, Landsat NDVI, and OpenStreetMap data into an interactive, grant-funded research tool.">
+    <meta name="author" content="Soham Roy">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://sohamroy.netlify.app/work/shadowmap.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ShadowMap — Case Study | Soham Roy">
+    <meta property="og:description" content="A geospatial ML pipeline predicting block-level urban heat across Delhi — fusing satellite, vegetation, and street-network data into an interactive research tool.">
+    <meta property="og:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://sohamroy.netlify.app/work/shadowmap.html">
+    <meta property="og:site_name" content="Soham Roy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ShadowMap — Case Study | Soham Roy">
+    <meta name="twitter:description" content="A geospatial ML pipeline predicting block-level urban heat across Delhi.">
+    <meta name="twitter:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon-16.png">
+    <link rel="apple-touch-icon" href="../Assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav>
+    <a href="/" class="nav-logo">sr.</a>
+    <div class="nav-links">
+        <a href="/#building">&larr; All Work</a>
+        <a href="/#contact">Say Hello</a>
+    </div>
+</nav>
+
+<section class="cs-hero" id="main">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">Case Study</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Geospatial AI &middot; ShadowMap</span>
+        </div>
+        <h1 class="cs-title reveal">ShadowMap<br><em>Predicting Urban Heat Before It Happens</em></h1>
+        <p class="cs-dek reveal">
+            A geospatial ML pipeline that predicts block-level urban heat across Delhi &mdash; now a university grant-funded research project, from satellite data to an interactive map.
+        </p>
+
+        <div class="now-availability reveal">
+            <div class="avail-row">
+                <span class="avail-key">Role</span>
+                <span class="avail-value">Geospatial ML Engineer &mdash; grant-funded, PI-supervised</span>
+            </div>
+            <div class="avail-row">
+                <span class="avail-key">Status</span>
+                <span class="avail-value">Active research project</span>
+            </div>
+            <div class="avail-row">
+                <span class="avail-key">Links</span>
+                <span class="avail-value"><a href="https://urban-heat-island-prediction.netlify.app/" target="_blank" rel="noopener" class="tl-link">&rarr; Live</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/Urban-Heat-Island-Prediction" target="_blank" rel="noopener" class="tl-link">&rarr; GitHub</a></span>
+            </div>
+        </div>
+
+        <div class="cs-art-banner reveal">
+            <img src="../Assets/art/shadowmap.svg" alt="" loading="eager" width="900" height="562">
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+    <div class="container">
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">01</span>
+                <div class="section-rule"></div>
+                <span class="section-name">The problem</span>
+            </div>
+            <p class="reveal">
+                Heat doesn't fall evenly across a city. Some blocks run several degrees hotter than others because of building density, vegetation cover, and surface material &mdash; but most public heat data comes from satellites at a resolution too coarse to act on. If you're a city planner deciding where to add tree cover or reflective roofing, "this district is hot" isn't specific enough to do anything with.
+            </p>
+        </div>
+
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">02</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Approach</span>
+            </div>
+            <p class="reveal">
+                I fused three different data sources: Sentinel-3 land surface temperature for the thermal signal, Landsat NDVI for vegetation cover, and OpenStreetMap for building density and street network structure. Those don't share a native resolution or format &mdash; satellite rasters, vector geometry &mdash; so a meaningful chunk of the work was building features that meant the same thing at the block level regardless of which dataset they came from.
+            </p>
+            <p class="reveal">
+                On top of that, I trained an XGBoost model using quantile regression instead of a single point estimate, because a planner deciding where to intervene needs to know the range of likely outcomes, not just the median one.
+            </p>
+        </div>
+
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">03</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Making it usable</span>
+            </div>
+            <p class="reveal">
+                A model that only exists as a notebook doesn't help anyone. I built a FastAPI backend to serve predictions and a React + Leaflet.js frontend so the output is an interactive map, not a spreadsheet &mdash; you can click a block and see its predicted heat range, not just a number in isolation. That was the harder half of the project: the modeling was a solved-shaped problem, but making climate data interpretable to someone without a data science background took as much thought as the model itself.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="pull-quote-section">
+    <span class="quote-mark" aria-hidden="true">&#8220;</span>
+    <blockquote class="pull-quote reveal">
+        ShadowMap is now a small, grant-funded research project with a PI supervising the work &mdash; real accountability, a real timeline, and results that need to hold up to more scrutiny than a competition demo. It's <em>ongoing.</em>
+    </blockquote>
+</section>
+
+<section>
+    <div class="container">
+        <div class="cs-section" style="padding-top: 0;">
+            <div class="section-label reveal">
+                <span class="section-num">Stack</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Tools &amp; technologies</span>
+            </div>
+            <div class="skill-items reveal">
+                <span class="skill-item hi">XGBoost</span>
+                <span class="skill-item hi">Quantile Regression</span>
+                <span class="skill-item hi">Geospatial ML</span>
+                <span class="skill-item">FastAPI</span>
+                <span class="skill-item">React</span>
+                <span class="skill-item">Leaflet.js</span>
+                <span class="skill-item">Sentinel-3 LST</span>
+                <span class="skill-item">Landsat NDVI</span>
+                <span class="skill-item">OpenStreetMap</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="cs-nav-footer reveal">
+    <a href="algozen.html" class="cta-button">&larr; AlgoZen</a>
+    <a href="/" class="cta-button">Back to portfolio</a>
+</div>
+
+<footer id="contact">
+    <div class="footer-content">
+        <span class="footer-text">Soham Roy &middot; 2026</span>
+        <div class="footer-links">
+            <a href="mailto:sohamroy20sr@gmail.com" class="footer-link" title="Email" aria-label="Email Soham Roy">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/soham-roy-8a664a320/" target="_blank" rel="noopener" class="footer-link" title="LinkedIn" aria-label="Soham Roy on LinkedIn">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/sohamroy06" target="_blank" rel="noopener" class="footer-link" title="GitHub" aria-label="Soham Roy on GitHub">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>

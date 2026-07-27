@@ -975,3 +975,71 @@ footer {
 
     .quote-mark { display: none; }
 }
+
+/* ══════════════════════════════
+   CASE STUDY PAGES
+══════════════════════════════ */
+.cs-hero { padding-bottom: 0; }
+.cs-title {
+    font-family: var(--serif);
+    font-size: clamp(38px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 26px 0 20px;
+}
+.cs-title em { font-style: italic; color: var(--accent); }
+.cs-dek {
+    font-size: clamp(15px, 1.7vw, 18px);
+    color: var(--ink-muted);
+    max-width: 620px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+.cs-art-banner { margin-top: 8px; }
+.cs-art-banner img {
+    width: 100%;
+    aspect-ratio: 900 / 562;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 24px 60px -24px rgba(13, 13, 13, 0.4);
+}
+.cs-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: clamp(48px, 7vw, 80px);
+}
+.cs-section:first-child { padding-top: 0; }
+.cs-section .section-label { margin-bottom: 24px; }
+.cs-section p {
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.cs-section p:last-child { margin-bottom: 0; }
+.cs-section p em { font-style: italic; color: var(--ink); }
+.cs-section .skill-items { margin-top: 4px; }
+
+.stat-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.cs-nav-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: clamp(48px, 7vw, 72px) clamp(24px, 6vw, 88px);
+    padding-left: clamp(24px, 7vw, 108px);
+}
+.cs-nav-footer .cta-button { flex: none; }
+
+@media (max-width: 768px) {
+    .cs-nav-footer { flex-direction: column; align-items: stretch; }
+    .cs-nav-footer .cta-button { width: 100%; }
+}

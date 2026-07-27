@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoZen — Case Study | Soham Roy</title>
+    <meta name="description" content="Building a NIFTY 500 algorithmic trading system with regime detection, walk-forward optimization, and genetic algorithm tuning — and the discipline it took to trust the backtest.">
+    <meta name="author" content="Soham Roy">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://sohamroy.netlify.app/work/algozen.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AlgoZen — Case Study | Soham Roy">
+    <meta property="og:description" content="Building a NIFTY 500 algorithmic trading system with regime detection, walk-forward optimization, and genetic algorithm tuning.">
+    <meta property="og:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://sohamroy.netlify.app/work/algozen.html">
+    <meta property="og:site_name" content="Soham Roy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AlgoZen — Case Study | Soham Roy">
+    <meta name="twitter:description" content="Building a NIFTY 500 algorithmic trading system with regime detection, walk-forward optimization, and genetic algorithm tuning.">
+    <meta name="twitter:image" content="https://sohamroy.netlify.app/Assets/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/favicon-16.png">
+    <link rel="apple-touch-icon" href="../Assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav>
+    <a href="/" class="nav-logo">sr.</a>
+    <div class="nav-links">
+        <a href="/#building">&larr; All Work</a>
+        <a href="/#contact">Say Hello</a>
+    </div>
+</nav>
+
+<section class="cs-hero" id="main">
+    <div class="container">
+        <div class="section-label reveal">
+            <span class="section-num">Case Study</span>
+            <div class="section-rule"></div>
+            <span class="section-name">Quant Finance &middot; AlgoZen</span>
+        </div>
+        <h1 class="cs-title reveal">AlgoZen<br><em>A Trading System I'd Actually Trust</em></h1>
+        <p class="cs-dek reveal">
+            A quantitative trading system for NIFTY 500 &mdash; built, broken, and rebuilt until it survived validation it wasn't designed to game.
+        </p>
+
+        <div class="now-availability reveal">
+            <div class="avail-row">
+                <span class="avail-key">Role</span>
+                <span class="avail-value">Solo &mdash; Quant Developer</span>
+            </div>
+            <div class="avail-row">
+                <span class="avail-key">Targets</span>
+                <span class="avail-value">Sharpe &gt; 1.0 &middot; CAGR 14&ndash;18% &middot; Max Drawdown &lt; 15%</span>
+            </div>
+            <div class="avail-row">
+                <span class="avail-key">Links</span>
+                <span class="avail-value"><a href="https://github.com/sohamroy06/ALGOZEN_NEW" target="_blank" rel="noopener" class="tl-link">&rarr; GitHub</a></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+    <div class="container">
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">01</span>
+                <div class="section-rule"></div>
+                <span class="section-name">The problem</span>
+            </div>
+            <p class="reveal">
+                Most retail-built trading strategies fail the moment they leave the backtest that produced them &mdash; they're overfit to history, or they assume market conditions that don't hold for more than a quarter. I wanted to build something with a real bar to clear: profitable, statistically defensible, and honest about how it would behave outside the data it was trained on.
+            </p>
+        </div>
+
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">02</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Approach</span>
+            </div>
+            <p class="reveal">
+                AlgoZen went through several full architectural rebuilds before I trusted it. The strategy uses regime detection so its behavior adapts to different market conditions instead of assuming one regime holds forever, walk-forward optimization so every parameter is validated on data the model hasn't seen rather than fitted to the whole history at once, and a genetic algorithm to tune hyperparameters across a search space too large to grid-search by hand.
+            </p>
+            <p class="reveal">
+                I set explicit targets going in &mdash; Sharpe ratio above 1.0, CAGR between 14 and 18%, max drawdown under 15% &mdash; specifically so I couldn't quietly redefine "success" after seeing the results.
+            </p>
+        </div>
+
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">03</span>
+                <div class="section-rule"></div>
+                <span class="section-name">What I learned</span>
+            </div>
+            <p class="reveal">
+                The bigger lesson wasn't the Sharpe ratio itself &mdash; it was learning to distrust a good backtest until it survives validation on data it was never allowed to see. Walk-forward optimization is slower and less flattering than a standard backtest, and that's exactly why it's the one I trust. When AlgoZen finally cleared its target under that process, it meant something different than hitting the same number on an in-sample test would have.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="stat-strip">
+    <div class="container">
+        <div class="stat-grid stat-grid--3 reveal">
+            <div class="stat-item">
+                <div class="stat-num" data-count="1.129" data-decimals="3">1.129</div>
+                <div class="stat-label">Sharpe Ratio &mdash; Achieved on NIFTY 500</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">14&ndash;18%</div>
+                <div class="stat-label">CAGR &mdash; Target Range</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">&lt;15%</div>
+                <div class="stat-label">Max Drawdown &mdash; Target Ceiling</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+    <div class="container">
+        <div class="cs-section">
+            <div class="section-label reveal">
+                <span class="section-num">Stack</span>
+                <div class="section-rule"></div>
+                <span class="section-name">Tools &amp; technologies</span>
+            </div>
+            <div class="skill-items reveal">
+                <span class="skill-item hi">Python</span>
+                <span class="skill-item hi">Walk-forward Optimization</span>
+                <span class="skill-item hi">Regime Detection</span>
+                <span class="skill-item">Genetic Algorithm Tuning</span>
+                <span class="skill-item">NIFTY 500</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="cs-nav-footer reveal">
+    <a href="stellar-analytics.html" class="cta-button">&larr; Stellar Analytics</a>
+    <a href="/" class="cta-button">Back to portfolio</a>
+    <a href="shadowmap.html" class="cta-button">Next: ShadowMap &rarr;</a>
+</div>
+
+<footer id="contact">
+    <div class="footer-content">
+        <span class="footer-text">Soham Roy &middot; 2026</span>
+        <div class="footer-links">
+            <a href="mailto:sohamroy20sr@gmail.com" class="footer-link" title="Email" aria-label="Email Soham Roy">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/soham-roy-8a664a320/" target="_blank" rel="noopener" class="footer-link" title="LinkedIn" aria-label="Soham Roy on LinkedIn">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/sohamroy06" target="_blank" rel="noopener" class="footer-link" title="GitHub" aria-label="Soham Roy on GitHub">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="../script.js" defer></script>
+</body>
+</html>
