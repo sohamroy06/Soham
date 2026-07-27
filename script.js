@@ -78,22 +78,6 @@ if (prefersReducedMotion) {
     });
 }
 
-/* ── Section watermark parallax — big numerals drift slower than scroll (skipped for reduced motion) ── */
-if (!prefersReducedMotion) {
-    document.querySelectorAll('.section-watermark').forEach((el) => {
-        gsap.to(el, {
-            y: 60,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: el.closest('section'),
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: true,
-            },
-        });
-    });
-}
-
 /* ── Stat count-up (renders final value instantly for reduced motion) ── */
 document.querySelectorAll('.stat-num[data-count]').forEach((el) => {
     const target = parseFloat(el.dataset.count);
@@ -128,35 +112,21 @@ document.querySelectorAll('.stat-num[data-count]').forEach((el) => {
     });
 });
 
-/* ── Staggered timeline card reveal (shown instantly for reduced motion) ── */
+/* ── Staggered project card reveal (shown instantly for reduced motion) ── */
 if (prefersReducedMotion) {
-    gsap.set('.tl-card', { opacity: 1, y: 0, x: 0 });
+    gsap.set('.tl-card', { opacity: 1, y: 0 });
 } else {
-    gsap.set('.tl-card:not(.tl-card--art)', { opacity: 0, y: 36 });
-    ScrollTrigger.batch('.tl-card:not(.tl-card--art)', {
+    gsap.set('.tl-card', { opacity: 0, y: 28 });
+    ScrollTrigger.batch('.tl-card', {
         start: 'top 85%',
         once: true,
         onEnter: (batch) => gsap.to(batch, {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.7,
             ease: 'power3.out',
-            stagger: 0.12,
+            stagger: 0.1,
         }),
-    });
-
-    /* Art cards slide in from the side their art panel sits on */
-    gsap.set('.tl-art-left', { opacity: 0, x: -48 });
-    gsap.set('.tl-art-right', { opacity: 0, x: 48 });
-    ScrollTrigger.batch('.tl-art-left', {
-        start: 'top 85%',
-        once: true,
-        onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12 }),
-    });
-    ScrollTrigger.batch('.tl-art-right', {
-        start: 'top 85%',
-        once: true,
-        onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12 }),
     });
 }
 

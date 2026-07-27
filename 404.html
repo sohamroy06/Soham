@@ -7,26 +7,25 @@
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32.png">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --ink: #0d0d0d;
-            --paper: #f5f3ee;
-            --ink-muted: #6b6b6b;
-            --accent: #c17b3f;
-            --serif: 'Cormorant Garamond', Georgia, serif;
+            --bg: #08080a;
+            --text: #f2f2f5;
+            --text-muted: #9a9aa6;
+            --accent: #6c8eff;
             --sans: 'DM Sans', system-ui, sans-serif;
             --mono: 'JetBrains Mono', monospace;
         }
         html, body {
             height: 100%;
-            background: var(--paper);
-            color: var(--ink);
+            background: var(--bg);
+            color: var(--text);
             font-family: var(--sans);
-            font-weight: 300;
+            font-weight: 400;
         }
         body {
             display: flex;
@@ -40,19 +39,20 @@
             font-family: var(--mono);
             font-size: 13px;
             letter-spacing: 0.14em;
-            color: var(--ink-muted);
+            color: var(--text-muted);
             margin-bottom: 24px;
         }
         h1 {
-            font-family: var(--serif);
-            font-weight: 400;
-            font-size: clamp(40px, 8vw, 88px);
-            line-height: 1.05;
+            font-family: var(--sans);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            font-size: clamp(36px, 7vw, 72px);
+            line-height: 1.1;
             margin-bottom: 20px;
         }
-        h1 em { font-style: italic; color: var(--accent); }
+        h1 em { font-style: normal; color: var(--accent); }
         p {
-            color: var(--ink-muted);
+            color: var(--text-muted);
             font-size: 15px;
             max-width: 420px;
             line-height: 1.8;
@@ -61,17 +61,17 @@
         a.home {
             font-family: var(--sans);
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--accent);
             text-decoration: none;
-            border: 1.5px solid var(--accent);
-            padding: 14px 28px;
-            border-radius: 2px;
+            border: 1px solid var(--accent);
+            padding: 13px 28px;
+            border-radius: 6px;
             transition: all 0.2s;
         }
         a.home:hover {
             background: var(--accent);
-            color: var(--paper);
+            color: var(--bg);
         }
         a.home:focus-visible {
             outline: 2px solid var(--accent);

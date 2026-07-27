@@ -7,7 +7,7 @@
     <title>Soham Roy — Builder, Researcher, Curious Person</title>
     <meta name="description" content="The personal story of Soham Roy — a CS student from Jaipur building at the edge of ML, markets, and infrastructure.">
     <meta name="author" content="Soham Roy">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#08080a">
     <link rel="canonical" href="https://sohamroy.netlify.app/">
 
     <!-- Open Graph -->
@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -72,19 +72,21 @@
 <a href="#hero" class="skip-link">Skip to content</a>
 <div class="noise" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<div class="edge-mark" aria-hidden="true"><span>Soham Roy — Portfolio — Jaipur, India — 2026 — Soham Roy — Portfolio</span></div>
 
 <!-- Nav -->
 <nav>
     <a href="#hero" class="nav-logo">sr.</a>
-    <div class="nav-links">
-        <a href="#beginning">Origins</a>
-        <a href="#building">Building</a>
-        <a href="#ml">Thinking</a>
-        <a href="#skills">Skills</a>
-        <a href="#community">Community</a>
-        <a href="#now">Now</a>
-        <a href="#contact">Say Hello</a>
+    <div class="nav-right">
+        <div class="nav-links">
+            <a href="#beginning">Origins</a>
+            <a href="#building">Building</a>
+            <a href="#ml">Thinking</a>
+            <a href="#skills">Skills</a>
+            <a href="#community">Community</a>
+            <a href="#now">Now</a>
+            <a href="#contact">Say Hello</a>
+        </div>
+        <div class="nav-status"><span class="status-dot pulse"></span><span>Open to work</span></div>
     </div>
 </nav>
 
@@ -100,17 +102,22 @@
         <p class="hero-sub">
             CS student at UEM Jaipur. I build ML pipelines, IoT systems, and quantitative trading strategies. Currently seeking research internships in ML/AI — open to IIT SURGE, industry labs, and remote positions.
         </p>
+        <div class="hero-cta">
+            <a href="Assets/SOHAM_ROY_CV.pdf" target="_blank" rel="noopener" class="cta-button cta-primary">Download CV</a>
+            <a href="#contact" class="cta-button">Get in touch</a>
+        </div>
         <div class="hero-scroll" aria-hidden="true">
             <div class="hero-scroll-line"></div>
             <span class="hero-scroll-text">Scroll</span>
         </div>
     </div>
-    <div class="hero-right" aria-hidden="true">
+    <div class="hero-right">
         <div class="hero-photo-frame">
             <picture>
                 <source srcset="Assets/soham.webp" type="image/webp">
                 <img class="hero-photo" src="Assets/soham.jpg" alt="Soham Roy" loading="eager" fetchpriority="high" width="1600" height="2088">
             </picture>
+            <div class="hero-photo-badge"><span class="status-dot"></span> Open to opportunities</div>
         </div>
     </div>
 </section>
@@ -148,7 +155,6 @@
 <section id="beginning">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">01</span>
             <div class="section-label reveal">
                 <span class="section-num">01</span>
                 <div class="section-rule"></div>
@@ -158,10 +164,7 @@
 
         <div class="narrative-grid">
             <h2 class="section-heading reveal">
-                Before the<br>
-                code, there<br>
-                was a broken<br>
-                <em>radio.</em>
+                Before the code, there was a broken <em>radio.</em>
             </h2>
 
             <div class="narrative-body">
@@ -186,7 +189,6 @@
 <section id="building">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">02</span>
             <div class="section-label reveal">
                 <span class="section-num">02</span>
                 <div class="section-rule"></div>
@@ -196,9 +198,7 @@
 
         <div class="narrative-grid">
             <h2 class="section-heading reveal">
-                From<br>
-                curiosity<br>
-                to <em>craft.</em>
+                From curiosity to <em>craft.</em>
             </h2>
             <p class="reveal section-intro">
                 I've built ML pipelines, IoT systems, and trading strategies. Each project crossed the gap between knowing how something works and building something that works for someone.
@@ -208,54 +208,68 @@
         <div class="timeline">
 
             <div class="tl-card">
-                <span class="tl-index">01</span>
-                <span class="tl-tag">IoT · Smart Infrastructure</span>
-                <h3 class="tl-title">Road Condition Monitoring System</h3>
-                <p class="tl-body">
-                    My first project that felt genuinely useful. Sensors on buses,
-                    real-time pothole detection, and infrastructure dashboards. I took it
-                    all the way — paper, grant proposal, and an interview with our Vice
-                    Chancellor. The first prototype had a sensor accuracy issue that took
-                    three weeks to debug.
-                </p>
-                <p class="tl-tech">Python · ESP32 · Sensor Fusion · Data Pipelines</p>
+                <div class="tl-content">
+                    <div class="tl-card-meta">
+                        <span class="tl-index">01</span>
+                        <span class="tl-tag">IoT · Smart Infrastructure</span>
+                    </div>
+                    <h3 class="tl-title">Road Condition Monitoring System</h3>
+                    <p class="tl-body">
+                        My first project that felt genuinely useful. Sensors on buses,
+                        real-time pothole detection, and infrastructure dashboards. I took it
+                        all the way — paper, grant proposal, and an interview with our Vice
+                        Chancellor. The first prototype had a sensor accuracy issue that took
+                        three weeks to debug.
+                    </p>
+                    <p class="tl-tech">Python · ESP32 · Sensor Fusion · Data Pipelines</p>
+                </div>
             </div>
 
             <div class="tl-card">
-                <span class="tl-index">02</span>
-                <span class="tl-tag">Drones · Aeromodelling Club</span>
-                <h3 class="tl-title">Building My First Drone from Scratch</h3>
-                <p class="tl-body">
-                    I joined the UEM Aeromodelling Club and attended the UDAAN workshop
-                    by Dronesster. Building a drone from component parts — frame, flight
-                    controller, ESCs, PID tuning — taught me something software alone never
-                    could: <em>physics doesn't have exceptions.</em> If the math is wrong, the
-                    drone falls.
-                </p>
-                <p class="tl-link-group"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7265371529654243328/" target="_blank" rel="noopener" class="tl-link">→ LinkedIn</a></p>
-                <p class="tl-tech">Arduino · PID Tuning · Flight Controller · ESCs</p>
+                <div class="tl-content">
+                    <div class="tl-card-meta">
+                        <span class="tl-index">02</span>
+                        <span class="tl-tag">Drones · Aeromodelling Club</span>
+                    </div>
+                    <h3 class="tl-title">Building My First Drone from Scratch</h3>
+                    <p class="tl-body">
+                        I joined the UEM Aeromodelling Club and attended the UDAAN workshop
+                        by Dronesster. Building a drone from component parts — frame, flight
+                        controller, ESCs, PID tuning — taught me something software alone never
+                        could: <em>physics doesn't have exceptions.</em> If the math is wrong, the
+                        drone falls.
+                    </p>
+                    <p class="tl-link-group"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7265371529654243328/" target="_blank" rel="noopener" class="tl-link">→ LinkedIn</a></p>
+                    <p class="tl-tech">Arduino · PID Tuning · Flight Controller · ESCs</p>
+                </div>
             </div>
 
             <div class="tl-card">
-                <span class="tl-index">03</span>
-                <span class="tl-tag">Competition · Technex IIT BHU 2025</span>
-                <h3 class="tl-title">Case Study Challenge — Top 3</h3>
-                <p class="tl-body">
-                    At Technex IIT BHU, my team entered a national-level case study competition
-                    that demanded more than technical thinking. We had to break down ambiguity,
-                    build a structured solution, and defend it in front of a panel — all within
-                    limited time. We finished in the top 3.
-                </p>
-                <p class="tl-tech">Case Study · Structured Problem Solving · Presentation</p>
+                <div class="tl-content">
+                    <div class="tl-card-meta">
+                        <span class="tl-index">03</span>
+                        <span class="tl-tag">Competition · Technex IIT BHU 2025</span>
+                    </div>
+                    <h3 class="tl-title">Case Study Challenge — Top 3</h3>
+                    <p class="tl-body">
+                        At Technex IIT BHU, my team entered a national-level case study competition
+                        that demanded more than technical thinking. We had to break down ambiguity,
+                        build a structured solution, and defend it in front of a panel — all within
+                        limited time. We finished in the top 3.
+                    </p>
+                    <p class="tl-tech">Case Study · Structured Problem Solving · Presentation</p>
+                </div>
             </div>
 
-            <div class="tl-card tl-card--art tl-art-left">
+            <div class="tl-card tl-card--art">
                 <div class="tl-art">
                     <img src="Assets/art/stellar-analytics.svg" alt="" loading="lazy" width="900" height="562">
                 </div>
                 <div class="tl-content">
-                    <span class="tl-index">04</span>
-                    <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
+                    <div class="tl-card-meta">
+                        <span class="tl-index">04</span>
+                        <span class="tl-tag">Competition · Technex IIT BHU 2026</span>
+                    </div>
                     <h3 class="tl-title">Stellar Analytics — NASA Kepler Dataset</h3>
                     <p class="tl-body">
                         My team Brahmastra entered Stellar Analytics at IIT BHU's Technex with an
@@ -269,27 +283,33 @@
             </div>
 
             <div class="tl-card">
-                <span class="tl-index">05</span>
-                <span class="tl-tag">Quant Finance · AlgoZen</span>
-                <h3 class="tl-title">Building a Trading System I'd Actually Trust</h3>
-                <p class="tl-body">
-                    AlgoZen wasn't built in a weekend. It went through multiple architectural
-                    rebuilds — regime detection, walk-forward optimization, genetic algorithm
-                    tuning on NIFTY 500. The targets were specific: Sharpe above 1.0, CAGR
-                    14–18%, max drawdown under 15%. When it finally hit Sharpe 1.129, I
-                    understood why quantitative people are obsessive.
-                </p>
-                <p class="tl-link-group"><a href="work/algozen.html" class="tl-link">→ Case Study</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/ALGOZEN_NEW" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
-                <p class="tl-tech">Python · Regime Detection · Walk-forward Optimization · GA Tuning · NIFTY 500</p>
+                <div class="tl-content">
+                    <div class="tl-card-meta">
+                        <span class="tl-index">05</span>
+                        <span class="tl-tag">Quant Finance · AlgoZen</span>
+                    </div>
+                    <h3 class="tl-title">Building a Trading System I'd Actually Trust</h3>
+                    <p class="tl-body">
+                        AlgoZen wasn't built in a weekend. It went through multiple architectural
+                        rebuilds — regime detection, walk-forward optimization, genetic algorithm
+                        tuning on NIFTY 500. The targets were specific: Sharpe above 1.0, CAGR
+                        14–18%, max drawdown under 15%. When it finally hit Sharpe 1.129, I
+                        understood why quantitative people are obsessive.
+                    </p>
+                    <p class="tl-link-group"><a href="work/algozen.html" class="tl-link">→ Case Study</a><span class="tl-link-sep"> | </span><a href="https://github.com/sohamroy06/ALGOZEN_NEW" target="_blank" rel="noopener" class="tl-link">→ GitHub</a></p>
+                    <p class="tl-tech">Python · Regime Detection · Walk-forward Optimization · GA Tuning · NIFTY 500</p>
+                </div>
             </div>
 
-            <div class="tl-card tl-card--art tl-art-right">
+            <div class="tl-card tl-card--art">
                 <div class="tl-art">
                     <img src="Assets/art/shadowmap.svg" alt="" loading="lazy" width="900" height="562">
                 </div>
                 <div class="tl-content">
-                    <span class="tl-index">06</span>
-                    <span class="tl-tag">Geospatial AI · ShadowMap</span>
+                    <div class="tl-card-meta">
+                        <span class="tl-index">06</span>
+                        <span class="tl-tag">Geospatial AI · ShadowMap</span>
+                    </div>
                     <h3 class="tl-title">Predicting Urban Heat Before It Happens</h3>
                     <p class="tl-body">
                         ShadowMap began as an attempt to understand why some parts of a city feel
@@ -303,13 +323,15 @@
                 </div>
             </div>
 
-            <div class="tl-card tl-card--art tl-art-left">
+            <div class="tl-card tl-card--art">
                 <div class="tl-art">
                     <img src="Assets/art/iconic.svg" alt="" loading="lazy" width="900" height="562">
                 </div>
                 <div class="tl-content">
-                    <span class="tl-index">07</span>
-                    <span class="tl-tag">Web · Conference Site</span>
+                    <div class="tl-card-meta">
+                        <span class="tl-index">07</span>
+                        <span class="tl-tag">Web · Conference Site</span>
+                    </div>
                     <h3 class="tl-title">ICNIC 2026</h3>
                     <p class="tl-body">
                         Designed and built the official website for the International Conference on
@@ -322,13 +344,15 @@
                 </div>
             </div>
 
-            <div class="tl-card tl-card--art tl-art-right">
+            <div class="tl-card tl-card--art">
                 <div class="tl-art">
                     <img src="Assets/art/iccasa.svg" alt="" loading="lazy" width="900" height="562">
                 </div>
                 <div class="tl-content">
-                    <span class="tl-index">08</span>
-                    <span class="tl-tag">Web · Conference Site</span>
+                    <div class="tl-card-meta">
+                        <span class="tl-index">08</span>
+                        <span class="tl-tag">Web · Conference Site</span>
+                    </div>
                     <h3 class="tl-title">ICCASA 2026</h3>
                     <p class="tl-body">
                         Built the site for the 4th International Conference on Computational Applied
@@ -351,7 +375,6 @@
 <section id="ml">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">03</span>
             <div class="section-label reveal">
                 <span class="section-num">03</span>
                 <div class="section-rule"></div>
@@ -361,9 +384,7 @@
 
         <div class="narrative-grid">
             <h2 class="section-heading reveal">
-                Patterns<br>
-                in the<br>
-                <em>noise.</em>
+                Patterns in the <em>noise.</em>
             </h2>
 
             <div class="narrative-body">
@@ -386,7 +407,6 @@
 <section id="skills">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">04</span>
             <div class="section-label reveal">
                 <span class="section-num">04</span>
                 <div class="section-rule"></div>
@@ -468,20 +488,20 @@
 
 <!-- ── PULL QUOTE ── -->
 <section class="pull-quote-section">
-    <span class="quote-mark" aria-hidden="true">&#8220;</span>
-    <blockquote class="pull-quote reveal">
-        I don't think I fell in love with technology.<br>
-        I think I fell in love with the feeling of making<br>
-        something <em>useful</em> exist where nothing existed before —<br>
-        and the discipline it takes to get there honestly.
-    </blockquote>
+    <div class="container">
+        <span class="quote-mark" aria-hidden="true">&#8220;</span>
+        <blockquote class="pull-quote reveal">
+            I don't think I fell in love with technology. I think I fell in love with the feeling of making
+            something <em>useful</em> exist where nothing existed before —
+            and the discipline it takes to get there honestly.
+        </blockquote>
+    </div>
 </section>
 
 <!-- ── COMMUNITY ── -->
 <section id="community">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">05</span>
             <div class="section-label reveal">
                 <span class="section-num">05</span>
                 <div class="section-rule"></div>
@@ -491,10 +511,7 @@
 
         <div class="narrative-grid">
             <h2 class="section-heading reveal">
-                The best<br>
-                things I've<br>
-                built were<br>
-                <em>with people.</em>
+                The best things I've built were <em>with people.</em>
             </h2>
 
             <div class="narrative-body">
@@ -518,7 +535,6 @@
 <section id="now">
     <div class="container">
         <div class="section-head">
-            <span class="section-watermark" aria-hidden="true">06</span>
             <div class="section-label reveal">
                 <span class="section-num">06</span>
                 <div class="section-rule"></div>
@@ -528,15 +544,13 @@
 
         <div class="narrative-grid narrative-grid-spaced">
             <h2 class="section-heading reveal">
-                What I'm<br>
-                thinking<br>
-                about <em>today.</em>
+                What I'm thinking about <em>today.</em>
             </h2>
             <div>
                 <div class="now-availability reveal">
                     <div class="avail-row">
                         <span class="avail-key">Availability:</span>
-                        <span class="avail-value">Open to the right opportunity</span>
+                        <span class="avail-value"><span class="status-dot pulse"></span> Open to the right opportunity</span>
                     </div>
                     <div class="avail-row">
                         <span class="avail-key">Roles:</span>
@@ -548,8 +562,8 @@
                     </div>
                 </div>
                 <div class="now-cta reveal">
-                    <a href="Assets/SOHAM_ROY_CV.pdf" target="_blank" rel="noopener" class="cta-button cta-download">Download CV</a>
-                    <a href="mailto:sohamroy20sr@gmail.com" class="cta-button cta-email">Email Me</a>
+                    <a href="Assets/SOHAM_ROY_CV.pdf" target="_blank" rel="noopener" class="cta-button cta-primary">Download CV</a>
+                    <a href="mailto:sohamroy20sr@gmail.com" class="cta-button">Email Me</a>
                 </div>
             </div>
         </div>
@@ -593,8 +607,7 @@
 <section class="contact-section" id="contact">
     <div class="container contact-container">
         <h2 class="contact-heading reveal">
-            Let's<br>
-            <em>talk.</em>
+            Let's <em>talk.</em>
         </h2>
         <p class="contact-body reveal">
             If you're working on something in ML, systems, or quant — and you think I could contribute — let's talk.
@@ -620,7 +633,7 @@
             </div>
 
             <div class="form-footer">
-                <button type="submit" class="cta-button contact-submit">Send Message</button>
+                <button type="submit" class="cta-button cta-primary contact-submit">Send Message</button>
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </div>
         </form>
