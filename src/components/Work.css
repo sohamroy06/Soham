@@ -1,0 +1,59 @@
+.work{ padding: 120px 0 100px; }
+
+.trajectory{
+  position: relative;
+  max-width: 1000px; margin: 0 auto;
+  padding: 0 var(--edge);
+}
+.trajectory__svg{
+  position: absolute; top: 0; left: 50%;
+  width: 100px; height: 100%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.entry{ position: relative; z-index: 1; width: 50%; padding: 0 44px 96px; }
+.entry--l{ margin-right: auto; text-align: right; }
+.entry--r{ margin-left: auto; text-align: left; }
+
+.entry__node{
+  position: absolute; top: var(--node-top, 10%);
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--paper); border: 2.4px solid var(--void);
+}
+.entry--l .entry__node{ right: -6.5px; }
+.entry--r .entry__node{ left: -6.5px; }
+
+.entry__card{
+  display: inline-block; max-width: 420px; text-align: left;
+  padding: 18px 20px; border-radius: var(--radius-md);
+  transition: background var(--dur-med) var(--ease), box-shadow var(--dur-med) var(--ease), transform var(--dur-med) var(--ease);
+}
+.entry--l .entry__card{ text-align: left; }
+.entry__card:hover{
+  background: var(--paper-hi);
+  box-shadow: 0 24px 48px -32px var(--void-45);
+  transform: translateY(-3px);
+}
+
+.entry__meta{ display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.entry__title{
+  font-family: var(--display); font-weight: 700;
+  font-size: 1.7rem; margin-bottom: 10px;
+}
+.entry__desc{ color: var(--void-70); font-size: .98rem; margin-bottom: 16px; }
+.entry__tags{
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+  font-family: var(--mono); font-size: .72rem;
+}
+.entry__tags li{ background: var(--void-06); padding: 4px 10px; border-radius: 999px; }
+.entry__links{ display: flex; gap: 16px; font-family: var(--mono); font-size: .82rem; }
+.entry__links a{ text-decoration: none; }
+.entry__links a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px){
+  .entry{ width: 100%; padding: 0 0 0 46px; text-align: left !important; margin: 0 0 72px; }
+  .entry--l .entry__node, .entry--r .entry__node{ left: -6.5px; right: auto; }
+  .entry__card{ text-align: left !important; }
+  .trajectory__svg{ left: 0; transform: none; width: 60px; }
+}

@@ -1,0 +1,30 @@
+.intro{
+  position: fixed; inset: 0; z-index: 900;
+  background: var(--void);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px;
+  overflow: hidden;
+}
+
+.intro__scope{
+  position: relative; width: 140px; height: 140px;
+}
+.intro__ring{
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid rgba(246,242,233,.5);
+}
+.intro__ring--1{ border-width: 2.5px; border-color: rgba(246,242,233,.65); }
+.intro__ring--2{ inset: 20px; border-color: rgba(159,196,234,.55); }
+.intro__ring--3{ inset: 42px; border-color: rgba(232,153,46,.65); border-style: dashed; }
+.intro__crosshair{ position: absolute; background: rgba(246,242,233,.4); }
+.intro__crosshair--h{ top: 50%; left: 6%; right: 6%; height: 1px; transform: translateY(-50%); }
+.intro__crosshair--v{ left: 50%; top: 6%; bottom: 6%; width: 1px; transform: translateX(-50%); }
+.intro__glint{
+  position: absolute; top: 20%; left: 24%; width: 20px; height: 20px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.85), transparent 70%);
+}
+
+.intro__label{
+  font-family: var(--mono); font-size: .74rem; letter-spacing: .16em;
+  color: rgba(246,242,233,.55);
+  margin: 0;
+}

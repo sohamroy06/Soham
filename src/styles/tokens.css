@@ -1,0 +1,24 @@
+:root{
+  --void:      #15141F;
+  --void-70:   rgba(21,20,31,.7);
+  --void-45:   rgba(21,20,31,.45);
+  --void-12:   rgba(21,20,31,.12);
+  --void-06:   rgba(21,20,31,.06);
+  --paper:     #F6F2E9;
+  --paper-hi:  #FCFAF4;
+  --blush:     #F3B4C2;
+  --cosmic:    #9FC4EA;
+  --amber:     #E8992E;
+
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --serif:   "Newsreader", Georgia, serif;
+  --mono:    "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --edge: clamp(20px, 5vw, 72px);
+  --radius-lg: 28px;
+  --radius-md: 16px;
+
+  --dur-fast: .25s;
+  --dur-med: .6s;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
