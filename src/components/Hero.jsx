@@ -1,5 +1,10 @@
+import { lazy, Suspense } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import './Hero.css';
+
+// Three.js is a heavy bundle — load it only once the browser needs it,
+// never as part of the initial hero paint.
+const HeroScene = lazy(() => import('./HeroScene'));
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -70,13 +75,12 @@ export default function Hero({ reducedMotion }) {
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 900 }}
           >
-            <div className="hero__portrait-blob" aria-hidden="true"></div>
-            <svg className="hero__orbit" viewBox="0 0 360 360" aria-hidden="true">
-              <ellipse cx="180" cy="200" rx="172" ry="74" fill="none" stroke="#15141F" strokeWidth="2" strokeDasharray="2 10" strokeLinecap="round" transform="rotate(-13 180 200)" />
-              <ellipse cx="180" cy="160" rx="132" ry="156" fill="none" stroke="#9FC4EA" strokeWidth="2" strokeDasharray="1 9" strokeLinecap="round" transform="rotate(11 180 160)" />
-              <circle cx="333" cy="146" r="4.5" fill="#E8992E" />
-              <circle cx="38" cy="252" r="3.5" fill="#15141F" />
-            </svg>
+            {/* 3D observatory scene (particles + orbiting badges) behind the
+                photo. Falls back to the original flat circle while the
+                Three.js bundle is still loading. */}
+            <Suspense fallback={<div className="hero__portrait-blob" aria-hidden="true" />}>
+              <HeroScene />
+            </Suspense>
             <motion.img
               className="hero__portrait"
               src="/assets/soham_roy.png"

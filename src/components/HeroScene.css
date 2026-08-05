@@ -1,0 +1,13 @@
+/* Fills the same slot the old .hero__portrait-blob / .hero__orbit
+   occupied: absolutely positioned behind the portrait photo (z-index 0
+   vs. the photo's z-index 1), never intercepting clicks/taps. */
+.hero-scene{
+  position: absolute;
+  inset: -18%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-scene canvas{
+  pointer-events: none;
+}
